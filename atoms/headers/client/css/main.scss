@@ -58,11 +58,15 @@
 .interactive-atom {
   h3 {
     @include fs-titlepiece(1);
-    margin-bottom: 0px;
+    margin-bottom: 20px;
+    margin-top: 8px;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 47px;
   }
 
   h4 {
-    @include fs-headline(3);
+    @include fs-headline(4);
     font-weight: 200;
     font-style: italic;
     padding-bottom: 48px;
@@ -71,14 +75,14 @@
       font-weight: 200;
     }
     @include mq(tablet) {
-      @include fs-headline(5);
+      @include fs-headline(4);
       font-weight: 200;
       font-size: 30px;
       line-height: 38px;
       padding-bottom: 24px;
     }
     @include mq(desktop) {
-      @include fs-headline(5);
+      @include fs-headline(4);
       font-weight: 200;
     }
   }
@@ -87,21 +91,14 @@
 
 .section {
   &-copy {
-    max-width: 540px;
+    max-width: 500px;
     order: 2;
-
-
+    margin-right: 20px;
 
     @include mq(mobile) {
         padding-left:12px;
     }
     
-
-    @include mq(tablet) {
-          min-height: 338px;
-          order: 1;
-    }
-
     @include mq(leftCol) {
       margin-left: 160px;
     }
@@ -109,6 +106,28 @@
       margin-left: 240px;
       padding-left:0px;
     }
+  }
+  &-image-wrapper {
+    width: 100%;
+    max-width: 980px;
+    height: auto;
+    padding-top: 6px;
+    order: 1;
+
+    @include mq(mobile) {
+        padding-left:12px;
+    }
+    
+    @include mq(leftCol) {
+      margin-left: 160px;
+    }
+    @include mq(wide) {
+      margin-left: 240px;
+    }
+  }
+  &-image {
+    width: 100%;
+    height: auto;
   }
   &-header {
     display: flex;
@@ -122,11 +141,7 @@
       width: 100%;
       position: absolute;
       top: 0px;
-      //left: -20px;
       background-color: $neutral-86;
-      @include mq(mobileLandscape) {
-        //width: calc(100% + 40px);
-      }
     }
     &:after {
       content: "";
@@ -134,35 +149,66 @@
       width: 100%;
       position: absolute;
       bottom: 0px;
-      //left: -20px;
       background-color: $neutral-86;
-      @include mq(mobileLandscape) {
-        //width: calc(100% + 40px);
-      }
-
-      
-    }
-
-    @include mq(tablet) {
-      flex-direction: row;
     }
   }
-  &-image-wrapper {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    padding-top: 6px;
-    // padding-bottom: 24px;
-    order: 1;
-
-    @include mq(tablet) {
-      order: 2;
-    }
-  }
-  &-image {
-    width: 100%;
-    //max-width: 400px;
-    height: auto;
-  }
+  
 }
 
+#gv-buttons-menu button {
+    display: inline-block;
+    color: #fff;
+    background-color: #121212;
+    font-size: 14px;
+    line-height: 115%;
+    font-family: "Guardian Text Sans Web","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-weight: 600;
+    border-radius: 44px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border:0;
+}
+
+.gv-quicknav-left {
+    font-size: 12px;
+    display: block;
+    color: #fff;
+    margin: 12px 0 48px 0;
+}
+
+.gv-quicknav-left span {
+    display: block;
+    font-family: "Guardian Text Sans Web",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-top: 4px;
+    color: #121212;
+}
+.gv-quicknav-left select {
+    color: #fff;
+    height: 32px;
+    outline: 0;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    border-radius: 30px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #121212 url(https://interactive.guim.co.uk/atoms/2020/07/mental-wellbeing/assets/v/1595512149852/images/arrow.svg) no-repeat 93% 50%;
+        background-size: auto;
+    background-size: 20px auto;
+    padding: 2px 15px;
+        padding-right: 15px;
+    font-family: "Guardian Text Sans Web",Helvetica,Arial,sans-serif;
+    cursor: pointer;
+    border: 1px solid #121212;
+    width: 260px;
+    padding-right: 0;
+    font-weight: 700;
+    font-size: 16px;
+    transform-origin: top left;
+    transform: scale(.875);
+}

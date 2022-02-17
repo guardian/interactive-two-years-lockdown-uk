@@ -1,0 +1,172 @@
+// @import "enhanced_fonts"; // for when you need special font features 
+@import "fonts";
+@import "mq";
+@import "palette";
+@import "dcr_enhancer"; // default left column enhancer, works with inline, showcase and immersive weighting
+// @import "full_immersive_enhancer"; // full-width enhancer, to be used with immersive weighting. Removes left colum, sets 100vw atom width at any breakpoint
+
+.interactive-atom {
+    margin: 0;
+    padding: 0;
+}
+// uncomment to test
+// .gv-wrapper {
+//     height: 400px;
+//     background: #121212;
+//     color: white;
+//     border-top: 1px solid #dcdcdc;
+//     border-bottom: 1px solid #dcdcdc;
+// }
+
+
+/*----- App fixes -----*/
+.ios, .android {
+    .element--immersive {
+        @include mq($until: tablet) {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw !important;
+            margin-right: -50vw;
+        }
+        @include mq(tablet) {
+            transform: translateX(-20px);
+            width: calc(100% + 60px);
+        }
+    }
+    
+    //remove dark mode padding in apps
+    figure.element.element-atom, figure.interactive.interactive-atom.interactive--loading {
+        padding: 0 !important;
+    }
+}
+
+
+.interactive-atom {
+  margin: 0;
+  padding: 0;
+}
+.interactive-body {
+  position: relative;
+  p {
+    @include fs-bodyCopy(2);
+    color: $neutral-7;
+  }
+}
+
+.interactive-atom {
+  h3 {
+    @include fs-titlepiece(1);
+    margin-bottom: 20px;
+    margin-top: 8px;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 47px;
+  }
+
+  h4 {
+    @include fs-headline(4);
+    font-weight: 200;
+    font-style: italic;
+    padding-bottom: 48px;
+    @include mq(mobile) {
+      @include fs-headline(4);
+      font-weight: 200;
+    }
+    @include mq(tablet) {
+      @include fs-headline(4);
+      font-weight: 200;
+      font-size: 30px;
+      line-height: 38px;
+      padding-bottom: 24px;
+    }
+    @include mq(desktop) {
+      @include fs-headline(4);
+      font-weight: 200;
+    }
+  }
+}
+
+
+.section {
+  &-copy {
+    max-width: 500px;
+    order: 2;
+
+
+
+    @include mq(mobile) {
+        padding-left:12px;
+    }
+    
+
+    @include mq(tablet) {
+          //min-height: 338px;
+          order: 1;
+    }
+
+    @include mq(leftCol) {
+      margin-left: 160px;
+    }
+    @include mq(wide) {
+      margin-left: 240px;
+      padding-left:0px;
+    }
+  }
+  &-header {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: relative;
+
+    &:before {
+      content: "";
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      top: 0px;
+      //left: -20px;
+      background-color: $neutral-86;
+      @include mq(mobileLandscape) {
+        //width: calc(100% + 40px);
+      }
+    }
+    &:after {
+      content: "";
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      bottom: 0px;
+      //left: -20px;
+      background-color: $neutral-86;
+      @include mq(mobileLandscape) {
+        //width: calc(100% + 40px);
+      }
+
+      
+    }
+
+    @include mq(tablet) {
+      flex-direction: row;
+    }
+  }
+  &-image-wrapper {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    padding-top: 6px;
+    // padding-bottom: 24px;
+    order: 1;
+
+    @include mq(tablet) {
+      order: 2;
+    }
+  }
+  &-image {
+    width: 100%;
+    //max-width: 400px;
+    height: auto;
+  }
+}
+
