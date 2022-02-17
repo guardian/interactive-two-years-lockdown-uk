@@ -12,6 +12,12 @@ let subHeadersContent = document.querySelectorAll('h2 > em');
 
 let imgs = [
 'Asset 2 1.png',
+'Asset 2 1.png',
+'Asset 2 1.png',
+'Asset 2 1.png',
+'Asset 2 1.png',
+'Asset 2 1.png',
+'Asset 2 1.png',
 'Asset 3 2.png'
 ]
 
