@@ -9,7 +9,7 @@ let imgs = [
 '3-finance.png',
 '4-travel.png',
 '5-shopping.png',
-'6-.png',
+'6-freetime.png',
 '7-.png',
 '8-.png'
 ]
