@@ -23,12 +23,12 @@
 .ios, .android {
     .element--immersive {
         @include mq($until: tablet) {
-            width: 100vw;
+            width: 100vw !important;
             position: relative;
-            left: 50%;
-            right: 50%;
+            left: 50% !important;
+            right: 50% !important;
             margin-left: -50vw !important;
-            margin-right: -50vw;
+            margin-right: -50vw !important;
         }
         @include mq(tablet) {
             transform: translateX(-20px);
@@ -41,6 +41,7 @@
         padding: 0 !important;
     }
 }
+
 
 
 .interactive-atom {
@@ -91,7 +92,7 @@
 
 .section {
   &-copy {
-    max-width: 500px;
+    max-width: 620px;
     order: 2;
     margin-right: 20px;
 
@@ -212,3 +213,4 @@
     transform-origin: top left;
     transform: scale(.875);
 }
+

@@ -1,24 +1,17 @@
-console.log('===============================================================')
-console.log('===============================================================')
-console.log('===============================================================')
-console.log('===========================v2.5==================================')
-console.log('===============================================================')
-console.log('===============================================================')
 
 let slots = document.querySelectorAll('#interactive-slot-1');
 let headersContent = document.querySelectorAll('h2 > strong');
 let subHeadersContent = document.querySelectorAll('h2 > em');
 
-
 let imgs = [
-'Asset 2 1.png',
-'Asset 2 1.png',
-'Asset 2 1.png',
-'Asset 2 1.png',
-'Asset 2 1.png',
-'Asset 2 1.png',
-'Asset 2 1.png',
-'Asset 3 2.png'
+'1-wfh.png',
+'2-countryside.png',
+'3-finance.png',
+'4-travel.png',
+'5-shopping.png',
+'6-.png',
+'7-.png',
+'8-.png'
 ]
 
 let content = []
@@ -77,12 +70,10 @@ navSlots.forEach((n,i) => {
 				scrollToSmoothly(y, 500);
 			})
 		}
-
-		console.log('end')
 	}
 
 
-	if(i>0)
+	else
 	{
 		n.innerHTML = `
 						<div class="gv-quicknav-left">
