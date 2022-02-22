@@ -42,6 +42,67 @@
     }
 }
 
+// Header image inject
+
+.content__headline, .headline {
+
+  @include fs-titlepiece(1);
+  margin-top: 205px;
+
+@include mq(mobileMedium) {
+     
+      margin-top: 280px;
+  }
+  @include mq(mobileLandscape) {
+      margin-top: 350px;
+  }
+  @include mq(desktop) {
+      @include fs-titlepiece(2);
+      margin-top: 360px;
+  }
+}
+
+.article__header {
+  background: transparent !important;
+
+  &::before {
+      margin-left: 0 !important;
+  }
+}
+
+article .content--interactive::before, .article__header::before {
+  //z-index: -1;
+  content: "";
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  clear: both;
+  background-image: url('<%= path %>/header/mobile_header.jpg');
+  width: 100%;
+  margin-left: -10px;
+  height: 220px;
+  background-position: center bottom;
+  background-color: #eaeaea;
+
+  @include mq(mobileMedium) {
+    height: 290px;
+  }
+
+  @include mq(mobileLandscape) {    
+    height: 350px;
+    margin-left: -20px;
+  }
+
+  @include mq(tablet) {
+    background-size: auto 100%;
+    background-image: url('<%= path %>/header/desktop_header.jpg');
+  }
+
+  @include mq(leftCol) {
+      background-image: url('<%= path %>/header/wide_header.jpg');
+  }
+}
+
 
 
 .interactive-atom {
