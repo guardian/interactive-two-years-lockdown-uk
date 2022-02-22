@@ -77,7 +77,7 @@ article .content--interactive::before, .article__header::before {
   background-repeat: no-repeat;
   position: absolute;
   clear: both;
-  background-image: url('<%= path %>/header/mobile_header.jpg');
+  background-image: url('<%= path %>/header/mob-1280x700.png');
   width: 100%;
   margin-left: -10px;
   height: 220px;
@@ -95,11 +95,11 @@ article .content--interactive::before, .article__header::before {
 
   @include mq(tablet) {
     background-size: auto 100%;
-    background-image: url('<%= path %>/header/desktop_header.jpg');
+    background-image: url('<%= path %>/header/desk-1900x700.png');
   }
 
   @include mq(leftCol) {
-      background-image: url('<%= path %>/header/wide_header.jpg');
+      background-image: url('<%= path %>/header/wide-2600x700.png');
   }
 }
 

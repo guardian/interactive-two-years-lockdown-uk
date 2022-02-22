@@ -4,14 +4,14 @@ let headersContent = document.querySelectorAll('h2 > strong');
 let subHeadersContent = document.querySelectorAll('h2 > em');
 
 let imgs = [
-'1-wfh.png',
-'2-countryside.png',
-'3-finance.png',
-'4-travel.png',
-'5-shopping.png',
-'6-freetime.png',
-'7-.png',
-'8-.png'
+'1-wfh',
+'2-countryside',
+'3-finance',
+'4-travel',
+'5-shopping',
+'6-freetime',
+'7-socialising',
+'8-pessimism'
 ]
 
 let content = []
@@ -27,7 +27,7 @@ slots.forEach((s,i) => {
 	`<div id="section-${content[i].header.replace(/[^a-z]/g, d => d.toLowerCase().replace(' ', ''))}">
 		<div class="section-header" id='header-${i}'> 
 			<div class="section-image-wrapper"> 
-				<img class="section-image" src="<%= path %>/${imgs[i]}" srcset="<%= path %>/${imgs[i]} 2x" alt=""> 
+				<img class="section-image" src="<%= path %>/${imgs[i]}.png" srcset="<%= path %>/${imgs[i]}_2x.png 2x" alt=""> 
 			</div> 
 			<div class="section-copy"> 
 				<h3>${header}</h3> 
