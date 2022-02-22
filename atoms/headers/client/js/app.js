@@ -27,7 +27,7 @@ slots.forEach((s,i) => {
 	`<div id="section-${content[i].header.replace(/[^a-z]/g, d => d.toLowerCase().replace(' ', ''))}">
 		<div class="section-header" id='header-${i}'> 
 			<div class="section-image-wrapper"> 
-				<img class="section-image" src="<%= path %>/${imgs[i]}" alt=""> 
+				<img class="section-image" src="<%= path %>/${imgs[i]}" srcset="<%= path %>/${imgs[i]} 2x" alt=""> 
 			</div> 
 			<div class="section-copy"> 
 				<h3>${header}</h3> 
