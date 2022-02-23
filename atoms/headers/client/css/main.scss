@@ -184,6 +184,7 @@ article .content--interactive::before, .article__header::before {
     
     @include mq(leftCol) {
       margin-left: 160px;
+      padding-left:0;
     }
     @include mq(wide) {
       margin-left: 240px;
@@ -191,7 +192,7 @@ article .content--interactive::before, .article__header::before {
     }
   }
   &-image-wrapper {
-    width: 100%;
+    //width: 100%;
     max-width: 980px;
     height: auto;
     padding-top: 6px;
