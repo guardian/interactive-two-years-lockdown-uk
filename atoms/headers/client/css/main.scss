@@ -46,8 +46,10 @@
 
 .content__headline, .headline {
 
-  @include fs-titlepiece(1);
+  //@include fs-titlepiece(1);
+  @include fs-headline(8);
   margin-top: 205px;
+  font-weight: bold;
 
 @include mq(mobileMedium) {
      
@@ -57,8 +59,17 @@
       margin-top: 350px;
   }
   @include mq(desktop) {
-      @include fs-titlepiece(2);
+      //@include fs-titlepiece(2);
+      @include fs-headline(9);
+      font-weight: bold;
       margin-top: 360px;
+  }
+}
+
+.content__standfirst, .standfirst {
+  p {
+    @include fs-headline(3);
+    font-weight: 400;
   }
 }
 
@@ -82,7 +93,7 @@ article .content--interactive::before, .article__header::before {
   margin-left: -10px;
   height: 220px;
   background-position: center bottom;
-  background-color: #eaeaea;
+  //background-color: #eaeaea;
 
   @include mq(mobileMedium) {
     height: 290px;
@@ -119,33 +130,35 @@ article .content--interactive::before, .article__header::before {
 
 .interactive-atom {
   h3 {
-    @include fs-titlepiece(1);
+    //@include fs-titlepiece(1);
     margin-bottom: 20px;
     margin-top: 8px;
+    //font-weight: bold;
+    //font-style: normal;
+    //font-size: 47px;
+    @include fs-headline(8);
     font-weight: bold;
-    font-style: normal;
-    font-size: 47px;
   }
 
   h4 {
-    @include fs-headline(4);
+    @include fs-headline(3);
     font-weight: 200;
     font-style: italic;
-    padding-bottom: 48px;
+    padding-bottom: 24px;
     @include mq(mobile) {
-      @include fs-headline(4);
-      font-weight: 200;
+      // @include fs-headline(4);
+      // font-weight: 200;
     }
     @include mq(tablet) {
-      @include fs-headline(4);
-      font-weight: 200;
-      font-size: 30px;
-      line-height: 38px;
-      padding-bottom: 24px;
+      // @include fs-headline(4);
+      // font-weight: 200;
+      // font-size: 30px;
+      // line-height: 38px;
+      // padding-bottom: 24px;
     }
     @include mq(desktop) {
-      @include fs-headline(4);
-      font-weight: 200;
+      // @include fs-headline(4);
+      // font-weight: 200;
     }
   }
 }
@@ -158,7 +171,15 @@ article .content--interactive::before, .article__header::before {
     margin-right: 20px;
 
     @include mq(mobile) {
-        padding-left:12px;
+        padding-left:20px;
+    }
+
+    @include mq(mobileLandscape) {
+      padding-left:28px;
+    }
+
+    @include mq(tablet) {
+      padding-left:20px;
     }
     
     @include mq(leftCol) {
@@ -177,7 +198,7 @@ article .content--interactive::before, .article__header::before {
     order: 1;
 
     @include mq(mobile) {
-        padding-left:12px;
+        //padding-left:12px;
     }
     
     @include mq(leftCol) {
@@ -243,7 +264,7 @@ article .content--interactive::before, .article__header::before {
     font-size: 12px;
     display: block;
     color: #fff;
-    margin: 12px 0 48px 0;
+    margin: 12px 0 30px 0;
 }
 
 .gv-quicknav-left span {
